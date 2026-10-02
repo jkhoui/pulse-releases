@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for Pulse Command Center for Windows.">
+  <title>Pulse Command Center Privacy Policy</title>
+  <style>
+    :root { color-scheme: light dark; font: 16px/1.65 system-ui, sans-serif; }
+    body { max-width: 820px; margin: 3rem auto; padding: 0 1.25rem; }
+    h1, h2 { line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 6vw, 3rem); }
+    a { color: #3487d4; }
+    .updated { color: #687385; }
+    code { overflow-wrap: anywhere; }
+    li { margin: .55rem 0; }
+    footer { margin-top: 3rem; border-top: 1px solid #8886; padding-top: 1rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Pulse Command Center Privacy Policy</h1>
+    <p class="updated">Effective date: October 2, 2026. Publisher: <strong>Ktron ai</strong>.</p>
+    <p>This policy describes the Pulse Command Center Windows development-preview package prepared for the Microsoft Store (version 2.2.2.0). The app is designed to show information on your PC and connect to services that you choose. It does not include a hosted monitoring service.</p>
+
+    <h2>Information handled by Pulse</h2>
+    <ul>
+      <li><strong>PC and network status:</strong> Pulse reads hardware status, the PC host name, local network interfaces, and the state of targets you configure so it can display local dashboards. This information stays on your PC; this package does not send it to Ktron ai.</li>
+      <li><strong>Connection settings and credentials:</strong> If you connect Proxmox, TrueNAS, Home Assistant, a sensor exporter, or another supported service, Pulse stores the server addresses and settings you enter in files under your Windows user profile, by default <code>%LOCALAPPDATA%\PulseCommandCenter</code>. Credentials, including API tokens, are used from your PC to connect to those services. Pulse does not send your integration credentials to Ktron ai.</li>
+      <li><strong>Workspace, trial, and license state:</strong> Pulse stores configured targets, local trial timestamps, and a random installation identifier in the same local data directory. The identifier is generated for licensing, but this package does not send it to Ktron ai because production billing is not configured.</li>
+      <li><strong>Local AI:</strong> If you use the optional AI view, Pulse sends prompts to the Ollama endpoint configured for the app (by default, Ollama on the same PC). The endpoint operator may process prompts you send. Prompts are not sent to Ktron ai by Pulse.</li>
+      <li><strong>Connected services:</strong> Pulse sends requests and the relevant credentials from your PC to the server addresses you configure. Those service operators handle the information under their own privacy practices. Ring and Blink connections use the Home Assistant integrations you configure; they are not operated by Ktron ai.</li>
+    </ul>
+    <p>The app code in this package does not include advertising or analytics. It does not transmit your dashboard contents, local network status, AI prompts, or integration settings to Ktron ai. Windows and Microsoft Store may process information under Microsoft's <a href="https://privacy.microsoft.com/privacystatement">Privacy Statement</a>, including to operate Store downloads or transactions.</p>
+
+    <h2>Storage, security, and deletion</h2>
+    <p>Pulse stores its settings and local state under your Windows user profile. Pulse does not encrypt the connection settings file itself; protect your Windows account and device, use read-only credentials when available, and do not share the Pulse data folder.</p>
+    <p>To remove Pulse's local data, exit Pulse and delete <code>%LOCALAPPDATA%\PulseCommandCenter</code>. This removes saved connections, targets, trial state, and local licensing files. Uninstalling Pulse may not remove this folder. Deleting Pulse data does not delete information stored by a server you connected to; contact that service's operator for those records.</p>
+    <p>The current package has no production billing configuration and sends no Pulse account, installation, or subscription record to Ktron ai. Ktron ai therefore has no remote Pulse profile from this package to access, correct, or delete. If a future release adds publisher-hosted billing or account services, this policy will be updated with the information involved, providers, retention, and contact method before that release is made available.</p>
+
+    <h2>Other providers</h2>
+    <p>Microsoft handles Microsoft Store account and transaction data under Microsoft's own privacy practices. The services you connect to, and any Ollama endpoint you choose, receive information necessary for the requests you make to them. The page hosting this policy is delivered by GitHub Pages; GitHub may process your IP address and browser/request information to host and secure the site under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's Privacy Statement</a>.</p>
+
+    <h2>Questions</h2>
+    <p>For general questions about Pulse or this policy, use the <a href="https://github.com/jkhoui/pulse-releases/issues">Pulse Releases issue tracker</a>. Issues are public. Do not post personal information, credentials, private network addresses, device identifiers, or subscription details there.</p>
+    <p>For information stored by Microsoft or a service you connect to, contact that provider directly. You can view, change, or remove Pulse's local settings on your PC as described above. Pulse does not send the data described in this policy to Ktron ai in this development-preview package.</p>
+
+    <h2>Changes</h2>
+    <p>This policy will be updated if Pulse's data practices change. The effective date at the top identifies the latest revision.</p>
+  </main>
+  <footer><a href="https://jkhoui.github.io/pulse-releases/">Pulse Releases</a></footer>
+</body>
+</html>
